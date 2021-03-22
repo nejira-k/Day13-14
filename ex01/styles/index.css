@@ -1,0 +1,59 @@
+
+.gallery {
+width: 1200px;
+margin: 18px auto;
+columns: 4;
+column-gap: 50px;
+}
+
+.img-container img {
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 15px;
+  background: #fff;
+
+  overflow: hidden;
+  break-inside: avoid;
+  object-fit: cover;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.img-container img:hover {
+  transform: scale(1.2)
+}
+.modal{
+  background:rgba(0, 0, 0, 0.8);
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: o;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease-out;
+}
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.full-img {
+  position: absolute;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transition: all 0.25s ease-out;
+  transform: translate(-50%, -50%) scale(0.5)
+}
+.full-img.open{
+  transform: translate(-50%, -50%) scale(1)
+}
+.modal p{
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+}
